@@ -13,7 +13,7 @@ app.use("/note", noteRouter)
 app.get("/", (req,res)=>{
     res.send("Note API From Ankur Tripathi");
 });
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5000;
 mongoose.connect(process.env.MONGO_URL).then(()=>{
     app.listen(PORT, ()=>{
         console.log("Server started port no." +PORT);
